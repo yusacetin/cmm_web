@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --button-color: rgb(245,245,245);
+    --button-border-color: rgb(214, 223, 255);
+    --button-box-shadow-color: rgba(58, 137, 255, 0.1);
+
+    --button-bg-hover: rgba(42, 127, 255, 0.685);
+    --button-bg-active: rgb(4, 104, 255);
+
+    --grad0: 0, 91, 201;
+    --grad1: 0, 72, 158;
+    --grad2: 0, 56, 122;
+    --grad3: 0, 39, 87;
+
+    --grad0h: 0, 121, 221;
+    --grad1h: 0, 102, 178;
+    --grad2h: 0, 86, 142;
+    --grad3h: 0, 69, 107;
+
+    --grad0a: 0, 141, 241;
+    --grad1a: 0, 122, 198;
+    --grad2a: 0, 106, 162;
+    --grad3a: 0, 89, 127;
+}
+
+html{
+    background-color: rgb(36, 36, 36);
+    color: rgb(224, 224, 224);
+}
+
+#control-panel{
+    padding: 10px 10px;
+    background-color: rgba(22, 22, 24, 0.9);
+    position: absolute;
+    border-radius: 0 0 20px 0;
+    line-height: 1.2em;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    max-width: 15em;
+}
+
+.control-item{
+    margin-bottom: 10px;
+    display: block;
+}
+
+.numinput{
+    width: 100px;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin-left: 5px;
+    outline: none;
+    border: black solid 2px;
+}
+
+.numinput:focus{
+    border: rgb(74, 116, 255) solid 2px;
+}
+
+button{
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 5px;
+    padding: 4px 12px;
+    color: var(--button-color);
+    border: var(--button-border-color) solid 1px;
+    border-radius: 6px;
+    box-shadow: 0 0 15px 0 var(--button-box-shadow-color);
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, rgb(var(--grad0)) 0%, rgb(var(--grad1)) 33%, rgb(var(--grad2)) 74%, rgb(var(--grad3)) 100%);
+    outline: none;
+}
+
+button:hover{
+    background: linear-gradient(to bottom, rgb(var(--grad0h)) 0%, rgb(var(--grad1h)) 33%, rgb(var(--grad2h)) 74%, rgb(var(--grad3h)) 100%);
+}
+
+button:active{
+    background: linear-gradient(to bottom, rgb(var(--grad0a)) 0%, rgb(var(--grad1a)) 33%, rgb(var(--grad2a)) 74%, rgb(var(--grad3a)) 100%);
+}
+
+#refreshlabel{
+    margin-left: 4px;
+}
