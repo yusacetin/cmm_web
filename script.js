@@ -1,3 +1,19 @@
+/*
+This file is part of Circular Modular Multiplication Web.
+
+Circular Modular Multiplication Web is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or (at your option)
+any later version.
+
+Circular Modular Multiplication Web is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with Circular Modular 
+Multiplication Web. If not, see <https://www.gnu.org/licenses/>.
+*/
+
 window.onload = function loaded(){init()};
 class Point{
     constructor(setx, sety){
@@ -23,7 +39,7 @@ var noOfPts = 180;
 var mul = 19;
 var lineSize = 0.05;
 var circumWidth = 3;
-const zoomCoef = 20;
+const zoomCoef = 10;
 var zoomC = r/zoomCoef;
 
 let ptsinput = document.getElementById("no-of-pts-input");
@@ -41,7 +57,6 @@ function init(){
     setFirstR();
     initVars();
     
-    //setPoints();
     drawAll(circleCenter);
 }
 
@@ -164,8 +179,6 @@ function takeCareOfDrag(){
 
 function resizeCanvas(){
     console.log("canvas resized")
-    //canvas.setAttribute("width",$(window).width());
-    //canvas.setAttribute("height",$(window).height());
     canvas.setAttribute("width", window.innerWidth);
     canvas.setAttribute("height", window.innerHeight);
     initVars();
